@@ -1,14 +1,13 @@
 import { Card } from "./Card";
 
-const CardList = ({ cards, isLoading, handleSearch }) => {
+const CardList = ({ cards = [] }) => {
   return (
     <>
       <div className="movies">
-        {!isLoading && cards.length === 0 && <p>Film is not found</p>}
-        {!isLoading && cards.length > 0 ? (
+        {cards.length ? (
           cards.map((card) => <Card props={card} key={card.imdbID} />)
         ) : (
-          <p>Loading...</p>
+          <p className="flow-text">Nothing found</p>
         )}
       </div>
     </>
