@@ -1,10 +1,9 @@
 import { Card } from "./Card";
 
-const CardList = ({ cards, isLoading }) => {
-  console.log(cards);
+const CardList = ({ cards, isLoading, handleSearch }) => {
   return (
     <>
-      <div className="row">
+      <div className="movies">
         {!isLoading ? (
           cards.map((card) => <Card props={card} key={card.imdbID} />)
         ) : (
