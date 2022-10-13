@@ -23,7 +23,20 @@ nav {
   padding: 1.5rem 0;
 }
 
+.search-btn {
+  position: absolute;
+  top: 0;
+  right: 0.5rem
+}
+
+.filter-comp {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+

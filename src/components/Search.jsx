@@ -1,24 +1,30 @@
 import { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
 
 function Search({ handleSearch }) {
   const [data, setData] = useState("");
+  const handleKey = (event) => {
+    if (event.key === "Enter") {
+      handleSearch(data);
+    }
+  };
 
   return (
     <div className="row">
-      <div className="col s9">
-        <div className="input-field">
-          <input
-            placeholder="Search"
-            value={data}
-            type="search"
-            className="validate"
-            onChange={(event) => {
-              setData(event.target.value);
-            }}
-          />
-          <div className="col s12"></div>
-          <button onClick={() => handleSearch(data)}>Search</button>
-        </div>
+      <div className="input-field">
+        <input
+          onKeyDown={handleKey}
+          placeholder="Type here"
+          value={data}
+          type="search"
+          className="validate"
+          onChange={(event) => {
+            setData(event.target.value);
+          }}
+        />
+        <button className="btn search-btn" onClick={() => handleSearch(data)}>
+          Search
+        </button>
       </div>
     </div>
   );
