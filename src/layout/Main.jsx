@@ -18,18 +18,19 @@ function Main() {
   const requestFilmCards = () => {
     setIsLoading(true);
     try {
-      fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=matrix&`)
+      fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=matrix&`)
         .then((responce) => responce.json())
         .then((data) => setCards(data["Search"]));
     } catch (error) {
-      console.log(error.message);
+      console.error(error);
+      setIsLoading(false);
     }
   };
 
   const handleSearch = (data, type = "all") => {
     try {
       fetch(
-        `http://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${data}${
+        `https://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${data}${
           type !== "all" ? `&type=${type}` : ""
         }`
       )
@@ -37,7 +38,8 @@ function Main() {
         .then((data) => setCards(data["Search"]));
       setIsLoading(false);
     } catch (error) {
-      toast(`${error.message}`);
+      console.error(error);
+      setIsLoading(false);
     }
   };
 
