@@ -18,7 +18,7 @@ function Main() {
   const requestFilmCards = () => {
     setIsLoading(true);
     try {
-      fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=matrix&`)
+      fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=saul&`)
         .then((responce) => responce.json())
         .then((data) => setCards(data["Search"]));
     } catch (error) {
