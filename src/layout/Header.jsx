@@ -3,11 +3,11 @@ function Header() {
     <nav className="#9fa8da indigo lighten-3">
       <div className="nav-wrapper">
         <a href="#" className="brand-logo">
-          Video catalog
+          Video saloon
         </a>
         <ul id="nav-mobile" className="right hide-on-med-and-down">
           <li>
-            <a href="!#">Repo</a>
+            <a href="https://github.com/dmtrack/movies-catalog.git">Repo</a>
           </li>
         </ul>
       </div>

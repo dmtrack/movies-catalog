@@ -3,11 +3,8 @@ function Footer() {
     <>
       <footer className="page-footer #efebe9 brown lighten-4">
         <div className="footer-copyright">
-          <div className="container">
+          <div className="container" style={{ textAlign: "center" }}>
             © {new Date().getFullYear()} Copyright Text
-            <a className="grey-text text-lighten-4 right" href="#!">
-              Repo
-            </a>
           </div>
         </div>
       </footer>
