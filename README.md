@@ -8,7 +8,7 @@ This project was created to learn React. At this page you able to request by nam
 + JavaScript 
 + React
 + API
-+ Materialise UI
++ Materialise UI framework
 
 ### Preview
 
