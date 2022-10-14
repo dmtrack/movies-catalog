@@ -6,4 +6,9 @@ This project was created to learn React
 
 + JavaScript 
 + React
++ API
 + Materialise UI
+
+## Preview
+
+![Preview](img/JSCourse.png)
