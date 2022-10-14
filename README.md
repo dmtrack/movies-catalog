@@ -1,14 +1,15 @@
-# Movie-catalog
+## ***Movie-catalog***
 
-This project was created to learn React
+### Description
+This project was created to learn React. At this page you able to request by name movies and serials
 
-## Stack
+### Stack
 
 + JavaScript 
 + React
 + API
 + Materialise UI
 
-## Preview
+### Preview
 
-![Preview](img/JSCourse.png)
+![Preview](public/projectPreview.png)
