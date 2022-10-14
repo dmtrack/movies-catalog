@@ -5,6 +5,8 @@ import { Search } from "../components/Search";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+const API_KEY = process.env.REACT_APP_API_KEY;
+
 function Main() {
   const [cards, setCards] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -13,11 +15,10 @@ function Main() {
     requestFilmCards();
     setIsLoading(false);
   }, []);
-
   const requestFilmCards = () => {
     setIsLoading(true);
     try {
-      fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=aae382ab&s=matrix&`)
+      fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=matrix&`)
         .then((responce) => responce.json())
         .then((data) => setCards(data["Search"]));
     } catch (error) {
@@ -28,7 +29,7 @@ function Main() {
   const handleSearch = (data, type = "all") => {
     try {
       fetch(
-        `http://www.omdbapi.com/?i=tt3896198&apikey=aae382ab&s=${data}${
+        `http://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${data}${
           type !== "all" ? `&type=${type}` : ""
         }`
       )
