@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { toast, ToastContainer } from "react-toastify";
 
 function Search({ handleSearch }) {
   const [data, setData] = useState("");
